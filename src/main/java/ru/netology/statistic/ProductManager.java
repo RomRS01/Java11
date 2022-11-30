@@ -5,7 +5,7 @@ public class ProductManager {
 
     private PurchaseItem[] items = new PurchaseItem[0];
 
-    public void All(PurchaseItem item) {
+    public void setAll(PurchaseItem item) {
         PurchaseItem[] tmp = new PurchaseItem[items.length + 1];
         for (int i = 0; i < items.length; i++) {
             tmp[i] = items[i];
