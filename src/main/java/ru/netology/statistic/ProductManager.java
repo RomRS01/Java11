@@ -1,11 +1,11 @@
 package ru.netology.statistic;
 
 public class ProductManager {
-    public int maxLimit = 10;
+    private int maxLimit = 10;
 
     private PurchaseItem[] items = new PurchaseItem[0];
 
-    public void setAll(PurchaseItem item) {
+    public void All(PurchaseItem item) {
         PurchaseItem[] tmp = new PurchaseItem[items.length + 1];
         for (int i = 0; i < items.length; i++) {
             tmp[i] = items[i];

@@ -25,17 +25,17 @@ public class ProductManagerTest {
 
     @BeforeEach
     public void setup() {
-        manager.setAll(item1);
-        manager.setAll(item2);
-        manager.setAll(item3);
-        manager.setAll(item4);
-        manager.setAll(item5);
-        manager.setAll(item6);
-        manager.setAll(item7);
-        manager.setAll(item8);
-        manager.setAll(item9);
-        manager.setAll(item10);
-        manager.setAll(item11);
+        manager.All(item1);
+        manager.All(item2);
+        manager.All(item3);
+        manager.All(item4);
+        manager.All(item5);
+        manager.All(item6);
+        manager.All(item7);
+        manager.All(item8);
+        manager.All(item9);
+        manager.All(item10);
+        manager.All(item11);
     }
 
     @Test
