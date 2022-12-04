@@ -3,6 +3,13 @@ package ru.netology.statistic;
 public class ProductManager {
     private int maxLimit = 10;
 
+    public ProductManager() {
+        this.maxLimit = 10;
+    }
+    public ProductManager(int maxLimit) {
+        this.maxLimit = maxLimit;
+    }
+
     private PurchaseItem[] items = new PurchaseItem[0];
 
     public void All(PurchaseItem item) {
