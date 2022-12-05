@@ -55,13 +55,5 @@ public class ProductManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test
-    public void shouFindLastTen() {
-
-        PurchaseItem[] expected = {item11, item10, item9, item8, item7, item6, item5, item4, item3, item2};
-        PurchaseItem[] actual = manager.findLastTen();
-        Assertions.assertArrayEquals(expected, actual);
-    }
-
 
 }

@@ -6,6 +6,7 @@ public class ProductManager {
     public ProductManager() {
         this.maxLimit = 10;
     }
+
     public ProductManager(int maxLimit) {
         this.maxLimit = maxLimit;
     }
@@ -22,20 +23,14 @@ public class ProductManager {
     }
 
 
-    public PurchaseItem[] findLast(int resultLength) {
-        PurchaseItem[] reversed = new PurchaseItem[resultLength];
-        for (int j = 0; j < resultLength; j++) {
-            reversed[j] = items[items.length - 1 - j];
-        }
-        return reversed;
-    }
-    public PurchaseItem[] findLastTen() {
+    public PurchaseItem[] findLast(int maxLimit) {
         PurchaseItem[] reversed = new PurchaseItem[maxLimit];
         for (int j = 0; j < maxLimit; j++) {
             reversed[j] = items[items.length - 1 - j];
         }
         return reversed;
     }
+
 
     public PurchaseItem[] getItems() {
         return items;
