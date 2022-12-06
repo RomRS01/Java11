@@ -2,6 +2,7 @@ package ru.netology.statistic;
 
 public class ProductManager {
     private int maxLimit = 10;
+    private PurchaseItem[] items = new PurchaseItem[0];
 
     public ProductManager() {
         this.maxLimit = 10;
@@ -11,9 +12,8 @@ public class ProductManager {
         this.maxLimit = maxLimit;
     }
 
-    private PurchaseItem[] items = new PurchaseItem[0];
 
-    public void All(PurchaseItem item) {
+    public void all(PurchaseItem item) {
         PurchaseItem[] tmp = new PurchaseItem[items.length + 1];
         for (int i = 0; i < items.length; i++) {
             tmp[i] = items[i];
@@ -23,7 +23,7 @@ public class ProductManager {
     }
 
 
-    public PurchaseItem[] findLast(int maxLimit) {
+    public PurchaseItem[] findLast() {
         PurchaseItem[] reversed = new PurchaseItem[maxLimit];
         for (int j = 0; j < maxLimit; j++) {
             reversed[j] = items[items.length - 1 - j];

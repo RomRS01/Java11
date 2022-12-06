@@ -10,6 +10,7 @@ import static org.mockito.Mockito.*;
 public class ProductManagerTest {
     ProductManager repo = Mockito.mock(ProductManager.class);
     ProductManager manager = new ProductManager();
+    ProductManager managerFive = new ProductManager(5);
 
     PurchaseItem item1 = new PurchaseItem("Бладшот");
     PurchaseItem item2 = new PurchaseItem("Вперёд");
@@ -25,17 +26,17 @@ public class ProductManagerTest {
 
     @BeforeEach
     public void setup() {
-        manager.All(item1);
-        manager.All(item2);
-        manager.All(item3);
-        manager.All(item4);
-        manager.All(item5);
-        manager.All(item6);
-        manager.All(item7);
-        manager.All(item8);
-        manager.All(item9);
-        manager.All(item10);
-        manager.All(item11);
+        manager.all(item1);
+        manager.all(item2);
+        manager.all(item3);
+        manager.all(item4);
+        manager.all(item5);
+        manager.all(item6);
+        manager.all(item7);
+        manager.all(item8);
+        manager.all(item9);
+        manager.all(item10);
+        manager.all(item11);
     }
 
     @Test
@@ -48,10 +49,11 @@ public class ProductManagerTest {
 
 
     @Test
-    public void shouFindLast() {
 
+    public void shouFindLast() {
+        ProductManager manager = new ProductManager(5);
         PurchaseItem[] expected = {item11, item10, item9, item8, item7};
-        PurchaseItem[] actual = manager.findLast(5);
+        PurchaseItem[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
 
