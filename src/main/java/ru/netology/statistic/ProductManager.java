@@ -24,9 +24,17 @@ public class ProductManager {
 
 
     public PurchaseItem[] findLast() {
+        if (maxLimit > items.length) {
+            maxLimit = items.length;
+        }
         PurchaseItem[] reversed = new PurchaseItem[maxLimit];
+
         for (int j = 0; j < maxLimit; j++) {
-            reversed[j] = items[items.length - 1 - j];
+            if (maxLimit > items.length) {
+                reversed[j] = null;
+            } else {
+                reversed[j] = items[items.length - 1 - j];
+            }
         }
         return reversed;
     }
