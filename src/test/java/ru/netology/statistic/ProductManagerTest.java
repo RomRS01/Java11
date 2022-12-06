@@ -67,6 +67,7 @@ public class ProductManagerTest {
         PurchaseItem[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouFindLastEleven() {
         ProductManager manager = new ProductManager(11);
@@ -81,10 +82,11 @@ public class ProductManagerTest {
         manager.all(item9);
         manager.all(item10);
         manager.all(item11);
-        PurchaseItem[] expected = {item11, item10, item9, item8, item7, item6, item5, item4,item3, item2, item1};
+        PurchaseItem[] expected = {item11, item10, item9, item8, item7, item6, item5, item4, item3, item2, item1};
         PurchaseItem[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouFindLastTwelve() {
         ProductManager manager = new ProductManager(12);
@@ -99,7 +101,7 @@ public class ProductManagerTest {
         manager.all(item9);
         manager.all(item10);
         manager.all(item11);
-        PurchaseItem[] expected = {item11, item10, item9, item8, item7, item6, item5, item4,item3, item2, item1};
+        PurchaseItem[] expected = {item11, item10, item9, item8, item7, item6, item5, item4, item3, item2, item1};
         PurchaseItem[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }

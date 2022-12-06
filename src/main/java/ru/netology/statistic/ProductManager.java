@@ -24,20 +24,20 @@ public class ProductManager {
 
 
     public PurchaseItem[] findLast() {
-        int parameter;
+        int insteadOfmaxLimit;
         if (maxLimit > items.length) {
-            parameter = items.length;
+            insteadOfmaxLimit = items.length;
         } else {
-            parameter = maxLimit;
+            insteadOfmaxLimit = maxLimit;
         }
-        PurchaseItem[] reversed = new PurchaseItem[parameter];
+        PurchaseItem[] reversed = new PurchaseItem[insteadOfmaxLimit];
 
-        for (int j = 0; j < parameter; j++) {
+        for (int j = 0; j < insteadOfmaxLimit; j++) {
             reversed[j] = items[items.length - 1 - j];
 
-    }
+        }
         return reversed;
-}
+    }
 
 
     public PurchaseItem[] getItems() {
